@@ -34,7 +34,7 @@ class PasswordController extends Controller
             $user->password = Hash::make($request->new_password);
             $user->temp_pass = false;
             $user->save();
-            return redirect()->route('manage.dashboard')
+            return redirect()->route('dashboard')
                 ->with('message', 'Password was successfully changed.');
         }
         return redirect()->back()
