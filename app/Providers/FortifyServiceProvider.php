@@ -8,6 +8,7 @@ use App\Actions\Fortify\UpdateUserPassword;
 use App\Actions\Fortify\UpdateUserProfileInformation;
 use App\Models\Currency;
 use App\Models\User;
+use Camroncade\Timezone\Facades\Timezone;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\ServiceProvider;
@@ -33,8 +34,14 @@ class FortifyServiceProvider extends ServiceProvider
     public function boot()
     {
         Fortify::registerView(function () {
+            $timezone_select = Timezone::selectForm(
+                'Africa/Nairobi',
+                '',
+                ['class' => 'form-control', 'name' => 'timezone']
+            );
             return view('auth.register', [
-                'currencies' => Currency::all()
+                'currencies' => Currency::all(),
+                'timezone_select' => $timezone_select
             ]);
         });
 

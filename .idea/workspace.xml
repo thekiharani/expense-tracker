@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa374b87-957f-4e0c-a104-4a423a8291f4" name="Default Changelist" comment="" />
+    <list default="true" id="fa374b87-957f-4e0c-a104-4a423a8291f4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/noriaPOS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/noriaPOS.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Actions/Fortify/CreateNewUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Actions/Fortify/CreateNewUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/PasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/PasswordController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IncomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IncomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Income.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Income.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/FortifyServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/FortifyServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/income_dt/_action.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/income_dt/_action.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/expense/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/expense/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/income/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/income/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/income/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/income/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/income/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/income/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/income/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/income/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +41,9 @@
         <option value="Vue Single File Component" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -146,30 +173,36 @@
       <path value="$PROJECT_DIR$/vendor/yajra/laravel-datatables-html" />
       <path value="$PROJECT_DIR$/vendor/yajra/laravel-datatables-editor" />
       <path value="$PROJECT_DIR$/vendor/yajra/laravel-datatables-oracle" />
+      <path value="$PROJECT_DIR$/vendor/camroncade/timezone" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kbXjorekhWxe4G5H9sb6SvX2RD" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/components/wish_dt" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/income" />
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/Manage" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/views/components/wish_dt" />
       <recent name="$PROJECT_DIR$/resources/views/components" />
       <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/resources/views/income" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/Http/Controllers/Manage" />
     </key>
   </component>
   <component name="RunManager">
@@ -191,7 +224,8 @@
       <workItem from="1606045920441" duration="225000" />
       <workItem from="1606046630043" duration="1912000" />
       <workItem from="1606060944199" duration="20211000" />
-      <workItem from="1606141160753" duration="2427000" />
+      <workItem from="1606141160753" duration="4775000" />
+      <workItem from="1606457330230" duration="23080000" />
     </task>
     <servers />
   </component>
@@ -219,26 +253,28 @@
       <screen x="0" y="27" width="3520" height="1018" />
     </state>
     <state width="1872" height="257" key="GridCell.Tab.0.right/0.27.3520.1018@0.27.3520.1018" timestamp="1606033808487" />
-    <state x="580" y="239" width="750" height="591" key="NewPhpClassDialog" timestamp="1606069301614">
+    <state x="580" y="239" width="750" height="591" key="NewPhpClassDialog" timestamp="1606526232782">
       <screen x="0" y="27" width="1920" height="1018" />
     </state>
-    <state x="580" y="239" width="750" height="591" key="NewPhpClassDialog/0.27.1920.1018/1920.0.1600.1200@0.27.1920.1018" timestamp="1606069301614" />
-    <state x="722" y="457" width="465" height="157" key="NewPhpFileDialog" timestamp="1606034746203">
-      <screen x="0" y="27" width="3520" height="1018" />
+    <state x="580" y="239" width="750" height="591" key="NewPhpClassDialog/0.27.1920.1018/1920.0.1600.1200@0.27.1920.1018" timestamp="1606526232782" />
+    <state x="394" y="457" width="266" height="157" key="NewPhpFileDialog" timestamp="1606461931196">
+      <screen x="0" y="27" width="1920" height="1018" />
     </state>
+    <state x="394" y="457" width="266" height="157" key="NewPhpFileDialog/0.27.1920.1018/1920.0.1600.1200@0.27.1920.1018" timestamp="1606461931196" />
     <state x="722" y="457" width="465" height="157" key="NewPhpFileDialog/0.27.3520.1018@0.27.3520.1018" timestamp="1606034746203" />
-    <state x="539" y="267" key="SettingsEditor" timestamp="1606031957141">
+    <state x="667" y="196" key="SettingsEditor" timestamp="1606457571858">
       <screen x="0" y="27" width="1920" height="1018" />
     </state>
+    <state x="667" y="196" key="SettingsEditor/0.27.1920.1018/1920.0.1600.1200@0.27.1920.1018" timestamp="1606457571858" />
     <state x="539" y="267" key="SettingsEditor/0.27.1920.1018@0.27.1920.1018" timestamp="1606031957141" />
-    <state x="624" y="245" key="run.anything.popup" timestamp="1606073489454">
+    <state x="624" y="245" key="run.anything.popup" timestamp="1606524807855">
       <screen x="0" y="27" width="1920" height="1018" />
     </state>
-    <state x="624" y="245" key="run.anything.popup/0.27.1920.1018/1920.0.1600.1200@0.27.1920.1018" timestamp="1606073489454" />
-    <state x="623" y="250" width="720" height="678" key="search.everywhere.popup" timestamp="1606150292074">
+    <state x="624" y="245" key="run.anything.popup/0.27.1920.1018/1920.0.1600.1200@0.27.1920.1018" timestamp="1606524807855" />
+    <state x="623" y="250" width="720" height="678" key="search.everywhere.popup" timestamp="1606526633309">
       <screen x="0" y="27" width="1920" height="1018" />
     </state>
-    <state x="623" y="250" width="720" height="678" key="search.everywhere.popup/0.27.1920.1018/1920.0.1600.1200@0.27.1920.1018" timestamp="1606150292074" />
+    <state x="623" y="250" width="720" height="678" key="search.everywhere.popup/0.27.1920.1018/1920.0.1600.1200@0.27.1920.1018" timestamp="1606526633309" />
     <state x="623" y="250" width="672" height="678" key="search.everywhere.popup/0.27.1920.1018@0.27.1920.1018" timestamp="1606033204543" />
     <state x="1142" y="250" width="1232" height="678" key="search.everywhere.popup/0.27.3520.1018@0.27.3520.1018" timestamp="1606035677755" />
   </component>

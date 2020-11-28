@@ -165,6 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Camroncade\Timezone\TimezoneServiceProvider::class,
 
         /*
          * Application Service Providers...

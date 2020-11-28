@@ -30,8 +30,8 @@ class PasswordController extends Controller
         ]);
         $user = $request->user();
 
-        if (Hash::check($request->current_password, $user->password)) {
-            $user->password = Hash::make($request->new_password);
+        if (Hash::check($request->input('current_password'), $user->password)) {
+            $user->password = Hash::make($request->input('new_password'));
             $user->temp_pass = false;
             $user->save();
             return redirect()->route('dashboard')

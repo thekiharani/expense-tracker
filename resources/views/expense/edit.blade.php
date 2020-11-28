@@ -12,6 +12,7 @@
                     @method('PATCH')
                     <div class="card-body">
                         @include('layouts._messages')
+                        @include('income._inputs', ['expense' => null])
                         <div class="form-group">
                             <label for="item">Item</label>
                             <input type="text" name="item" id="item" class="form-control @error('item') is-invalid @enderror" value="{{ $expense->item }}" placeholder="Item" required>

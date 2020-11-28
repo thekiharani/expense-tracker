@@ -50,9 +50,12 @@
         <script src="{{ asset('js/app.js') }}"></script>
         <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.22/r-2.2.6/datatables.min.js"></script>
         <script>
-            $(document).on('click', '.logout-link', function (e) {
-                e.preventDefault();
-                document.getElementById('logout-form').submit();
+            $(function () {
+                // logout
+                $(document).on('click', '.logout-link', function (e) {
+                    e.preventDefault();
+                    document.getElementById('logout-form').submit();
+                });
             });
         </script>
 

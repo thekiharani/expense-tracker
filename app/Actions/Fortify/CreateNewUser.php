@@ -31,6 +31,7 @@ class CreateNewUser implements CreatesNewUsers
                 Rule::unique(User::class),
             ],
             'currency_id'=> ['required'],
+            'timezone'=> ['required'],
             'password' => $this->passwordRules(),
         ])->validate();
 
@@ -39,6 +40,7 @@ class CreateNewUser implements CreatesNewUsers
             'email' => $input['email'],
             'phone_number' => $input['phone_number'],
             'currency_id' => $input['currency_id'],
+            'timezone' => $input['timezone'],
             'password' => Hash::make($input['password']),
         ]);
     }

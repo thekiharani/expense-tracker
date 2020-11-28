@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->boolean('temp_pass')->default(false);
+            $table->string('timezone')->default('Africa/Nairobi');
             $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();

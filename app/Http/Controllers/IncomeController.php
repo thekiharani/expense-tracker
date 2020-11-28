@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\IncomeRequest;
 use App\Models\Income;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
@@ -24,13 +25,13 @@ class IncomeController extends Controller
                     return auth()->user()->currency_code .' '. number_format($income->amount);
                 })
                 ->editColumn('date_received', function ($income) {
-                    return date_only($income->date_received);
+                    return medium_date($income->date_received, true);
                 })
                 ->editColumn('created_at', function ($income) {
-                    return medium_date($income->created_at);
+                    return medium_date($income->created_at, true);
                 })
                 ->editColumn('updated_at', function ($income) {
-                    return time_diff($income->updated_at);
+                    return time_diff($income->updated_at, true);
                 })
                 ->addColumn('action', function ($income) {
                     return view('components.income_dt._action', ['income' => $income]);
@@ -44,7 +45,9 @@ class IncomeController extends Controller
     // show
     public function show(Income $income)
     {
-        return $income;
+        return view('income.show', [
+            'income' => $income
+        ]);
     }
 
     // create
@@ -54,15 +57,18 @@ class IncomeController extends Controller
     }
 
     // store
-    public function store(Request $request)
+    public function store(IncomeRequest $request)
     {
         Income::create([
-            'amount' => $request->amount,
-            'source' => $request->source,
-            'date_received' => $request->date_received
+            'amount' => $request->input('amount'),
+            'source' => $request->input('source'),
+            'date_received' => date_picked($request->input('date_received'))
         ]);
+        if ($request->ajax()) {
+            return response()->json(['message' => 'Income was successfully recorded.'], 200);
+        }
         return redirect()->route('income.index')
-            ->with('message', 'Income entry successfully created.');
+            ->with('message', 'Income entry successfully recorded.');
     }
 
     // edit
@@ -73,21 +79,27 @@ class IncomeController extends Controller
     }
 
     // update
-    public function update(Request $request, Income $income)
+    public function update(IncomeRequest $request, Income $income)
     {
         $income->update([
-            'amount' => $request->amount,
-            'source' => $request->source,
-            'date_received' => $request->date_received
+            'amount' => $request->input('amount'),
+            'source' => $request->input('source'),
+            'date_received' => date_picked($request->input('date_received'))
         ]);
+        if ($request->ajax()) {
+            return response()->json(['message' => 'Income was successfully updated.'], 200);
+        }
         return redirect()->route('income.index')
             ->with('message', 'Income entry successfully updated.');
     }
 
     // destroy
-    public function destroy(Income $income)
+    public function destroy(Request $request, Income $income)
     {
         $income->delete();
+        if ($request->ajax()) {
+            return response()->json(['message' => 'Income was successfully created'], 200);
+        }
         return redirect()->route('income.index')
             ->with('message', 'Income entry successfully deleted.');
     }

@@ -55,28 +55,44 @@
                     @enderror
                 </div>
 
-                <div class="input-group mb-3">
-                    <select class="form-control @error('currency_id') is-invalid @enderror" name="currency_id" required>
-                        <option value="">{{ __('-- Select Currency --') }}</option>
-                        @forelse($currencies as $currency)
-                            <option value="{{ $currency->id }}" {{ $currency->currency_id == old('currency_id') ? 'selected' : ''}}>
-                                {{ $currency->code }} - {{ $currency->name }}
-                            </option>
-                        @empty
-                            <p class="text-danger">{{ __('No currency records found') }}</p>
-                        @endforelse
-                    </select>
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <span class="fas fa-money-bill-alt"></span>
+                <div class="form-group">
+                    <label for="currency_id">Select Currency</label>
+                    <div class="input-group mb-3">
+                        <select class="form-control @error('currency_id') is-invalid @enderror" name="currency_id" required>
+                            <option value="">{{ __('-- Select Currency --') }}</option>
+                            @forelse($currencies as $currency)
+                                <option value="{{ $currency->id }}" {{ $currency->currency_id == old('currency_id') ? 'selected' : ''}}>
+                                    {{ $currency->code }} - {{ $currency->name }}
+                                </option>
+                            @empty
+                                <p class="text-danger">{{ __('No currency records found') }}</p>
+                            @endforelse
+                        </select>
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-money-bill-alt"></span>
+                            </div>
+                        </div>
+
+                        @error('currency_id')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="timezone">Select Time Zone</label>
+                    <div class="input-group mb-3">
+                        {!! $timezone_select !!}
+
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-globe-africa"></span>
+                            </div>
                         </div>
                     </div>
-
-                    @error('currency_id')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
                 </div>
 
                 <div class="input-group mb-3">
