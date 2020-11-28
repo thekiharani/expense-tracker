@@ -25,13 +25,13 @@ class IncomeController extends Controller
                     return auth()->user()->currency_code .' '. number_format($income->amount);
                 })
                 ->editColumn('date_received', function ($income) {
-                    return medium_date($income->date_received, true);
+                    return medium_date($income->date_received);
                 })
                 ->editColumn('created_at', function ($income) {
-                    return medium_date($income->created_at, true);
+                    return medium_date($income->created_at);
                 })
                 ->editColumn('updated_at', function ($income) {
-                    return time_diff($income->updated_at, true);
+                    return time_diff($income->updated_at);
                 })
                 ->addColumn('action', function ($income) {
                     return view('components.income_dt._action', ['income' => $income]);

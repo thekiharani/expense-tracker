@@ -1,6 +1,6 @@
 <?php
 
-function long_date($date_str, $tz=false)
+function long_date($date_str, $tz=true)
 {
     if ($tz) {
         return $date_str->timezone(auth()->user()->timezone)->format('jS F, Y | g:i a T');
@@ -9,7 +9,7 @@ function long_date($date_str, $tz=false)
     }
 }
 
-function medium_date($date_str, $tz=false)
+function medium_date($date_str, $tz=true)
 {
     if ($tz) {
         return $date_str->timezone(auth()->user()->timezone)->format('jS M, Y | g:i a T');
@@ -18,7 +18,7 @@ function medium_date($date_str, $tz=false)
     }
 }
 
-function short_date($date_str, $tz=false)
+function short_date($date_str, $tz=true)
 {
     if ($tz) {
         return $date_str->timezone(auth()->user()->timezone)->format('d/m/Y | g:i a T');
@@ -27,7 +27,7 @@ function short_date($date_str, $tz=false)
     }
 }
 
-function time_diff($date_str, $tz=false)
+function time_diff($date_str, $tz=true)
 {
     if ($tz) {
         return $date_str->timezone(auth()->user()->timezone)->diffForHumans();
