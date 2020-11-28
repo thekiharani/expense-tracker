@@ -10,6 +10,6 @@
 </div>
 <div class="form-group">
     <label for="date_received">Date Received</label>
-    <input type="text" name="date_received" id="date_received" class="form-control dpck" value="{{ $income ? edit_date($income->date_received) : old('date_received') }}" placeholder="Date received">
+    <input type="text" name="date_received" id="date_received" class="form-control dpck" value="{{ $income ? edit_date($income->date_received, true) : old('date_received') }}" placeholder="Date received">
     <div class="text-danger mt-2 error_message d-none" id="error_date_received"></div>
 </div>

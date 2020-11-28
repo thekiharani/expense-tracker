@@ -2,29 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa374b87-957f-4e0c-a104-4a423a8291f4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/noriaPOS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/noriaPOS.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Actions/Fortify/CreateNewUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Actions/Fortify/CreateNewUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/PasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/PasswordController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IncomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IncomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Income.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Income.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/FortifyServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/FortifyServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/income_dt/_action.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/income_dt/_action.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/expense/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/expense/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/income/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/income/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/income/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/income/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/income/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/income/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/income/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/income/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/income/_inputs.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/income/_inputs.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +205,7 @@
       <workItem from="1606046630043" duration="1912000" />
       <workItem from="1606060944199" duration="20211000" />
       <workItem from="1606141160753" duration="4775000" />
-      <workItem from="1606457330230" duration="23080000" />
+      <workItem from="1606457330230" duration="23388000" />
     </task>
     <servers />
   </component>

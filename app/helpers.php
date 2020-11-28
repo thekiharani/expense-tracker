@@ -48,5 +48,5 @@ function date_picked($date_str)
 
 function edit_date($date_str)
 {
-    return $date_str->format('d-m-Y H:i:s');
+    return $date_str->timezone(auth()->user()->timezone)->format('d-m-Y H:i:s');
 }
