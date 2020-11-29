@@ -5,32 +5,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/noriaPOS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/noriaPOS.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ExpenseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ExpenseController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IncomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IncomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WishController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WishController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ExpenseRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ExpenseRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/IncomeRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/IncomeRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/WishRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/WishRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/expense_dt/_action.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/expense_dt/_action.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/income_dt/_action.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/income_dt/_action.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/user_dt/_action.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/user_dt/_action.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/wish_dt/_action.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/wish_dt/_action.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/wish_dt/_priority.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/wish_dt/_priority.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/wish_dt/_purchased.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/wish_dt/_purchased.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/expense/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/expense/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/expense/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/expense/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/expense/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/expense/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/expense/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/expense/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/income/_inputs.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/income/_inputs.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/income/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/income/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/wish/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/wish/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/wish/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/wish/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/wish/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/wish/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/wish/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/wish/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,6 +162,8 @@
       <path value="$PROJECT_DIR$/vendor/symfony/debug" />
       <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
+      <path value="$PROJECT_DIR$/vendor/consoletvs/charts" />
+      <path value="$PROJECT_DIR$/vendor/chartisan/php" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kbXjorekhWxe4G5H9sb6SvX2RD" />
@@ -197,22 +178,22 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/wish" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/views/wish" />
-      <recent name="$PROJECT_DIR$/resources/views/components/wish_dt" />
-      <recent name="$PROJECT_DIR$/resources/views/components" />
-      <recent name="$PROJECT_DIR$/resources/views" />
-      <recent name="$PROJECT_DIR$/resources/views/income" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/views/income" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers/Manage" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views" />
+      <recent name="$PROJECT_DIR$/resources/views/wish" />
+      <recent name="$PROJECT_DIR$/resources/views/components/wish_dt" />
+      <recent name="$PROJECT_DIR$/resources/views/components" />
+      <recent name="$PROJECT_DIR$/resources/views/income" />
     </key>
   </component>
   <component name="RunManager">
@@ -237,7 +218,8 @@
       <workItem from="1606141160753" duration="4775000" />
       <workItem from="1606457330230" duration="23655000" />
       <workItem from="1606550463997" duration="6034000" />
-      <workItem from="1606640348011" duration="9829000" />
+      <workItem from="1606640348011" duration="11286000" />
+      <workItem from="1606682741889" duration="1840000" />
     </task>
     <servers />
   </component>
@@ -283,10 +265,10 @@
       <screen x="0" y="27" width="1920" height="1018" />
     </state>
     <state x="624" y="245" key="run.anything.popup/0.27.1920.1018/1920.0.1600.1200@0.27.1920.1018" timestamp="1606524807855" />
-    <state x="623" y="250" width="720" height="678" key="search.everywhere.popup" timestamp="1606668564395">
+    <state x="623" y="250" width="720" height="678" key="search.everywhere.popup" timestamp="1606684210279">
       <screen x="0" y="27" width="1920" height="1018" />
     </state>
-    <state x="623" y="250" width="720" height="678" key="search.everywhere.popup/0.27.1920.1018/1920.0.1600.1200@0.27.1920.1018" timestamp="1606668564395" />
+    <state x="623" y="250" width="720" height="678" key="search.everywhere.popup/0.27.1920.1018/1920.0.1600.1200@0.27.1920.1018" timestamp="1606684210279" />
     <state x="623" y="250" width="672" height="678" key="search.everywhere.popup/0.27.1920.1018@0.27.1920.1018" timestamp="1606033204543" />
     <state x="1142" y="250" width="1232" height="678" key="search.everywhere.popup/0.27.3520.1018@0.27.3520.1018" timestamp="1606035677755" />
   </component>

@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Charts\IncomeChart;
 use App\Models\Expense;
 use App\Models\Income;
 use App\Models\Wish;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -15,6 +15,7 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
+    // dashboard
     public function dashboard()
     {
         return view('dashboard', [
@@ -28,5 +29,13 @@ class HomeController extends Controller
                 Wish::all()->sum('cost_estimate'), 2
             )
         ]);
+    }
+
+    // charts
+    public function charts(Request $request)
+    {
+        $income = Income::all();
+        $chart = new IncomeChart;
+        return view('charts', compact('income', 'chart'));
     }
 }
