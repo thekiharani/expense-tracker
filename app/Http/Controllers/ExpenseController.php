@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ExpenseRequest;
 use App\Models\Expense;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
@@ -27,7 +28,7 @@ class ExpenseController extends Controller
                     return date_only($expense->date_transacted);
                 })
                 ->editColumn('created_at', function ($expense) {
-                    return medium_date($expense->created_at);
+                    return date_only($expense->created_at);
                 })
                 ->editColumn('updated_at', function ($expense) {
                     return time_diff($expense->updated_at);
@@ -44,7 +45,9 @@ class ExpenseController extends Controller
     // show
     public function show(Expense $expense)
     {
-        return $expense;
+        return view('expense.show', [
+            'expense' => $expense
+        ]);
     }
 
     // create
@@ -54,14 +57,17 @@ class ExpenseController extends Controller
     }
 
     // store
-    public function store(Request $request)
+    public function store(ExpenseRequest $request)
     {
         Expense::create([
-            'cost' => $request->cost,
-            'item' => $request->item,
-            'date_transacted' => $request->date_transacted,
-            'description' => $request->description ?? null
+            'cost' => $request->input('cost'),
+            'item' => $request->input('item'),
+            'date_transacted' => date_picked($request->input('date_transacted')),
+            'description' => $request->input('description') ?? null
         ]);
+        if ($request->ajax()) {
+            return response()->json(['message' => 'Expense was successfully recorded.'], 200);
+        }
         return redirect()->route('expense.index')
             ->with('message', 'Expense entry successfully created.');
     }
@@ -74,24 +80,30 @@ class ExpenseController extends Controller
     }
 
     // update
-    public function update(Request $request, Expense $expense)
+    public function update(ExpenseRequest $request, Expense $expense)
     {
         $expense->update([
-            'cost' => $request->cost,
-            'item' => $request->item,
-            'date_transacted' => $request->date_transacted,
-            'description' => $request->description ?? null
+            'cost' => $request->input('cost'),
+            'item' => $request->input('item'),
+            'date_transacted' => date_picked($request->input('date_transacted')),
+            'description' => $request->input('description') ?? null
         ]);
+        if ($request->ajax()) {
+            return response()->json(['message' => 'Expense was successfully recorded.'], 200);
+        }
         return redirect()->route('expense.index')
             ->with('message', 'Expense entry successfully updated.');
     }
 
     // destroy
-    public function destroy(Expense $expense)
+    public function destroy(Request $request, Expense $expense)
     {
         $expense->delete();
+        if ($request->ajax()) {
+            return response()->json(['message' => 'Expense was successfully trashed.'], 200);
+        }
         return redirect()->route('expense.index')
-            ->with('message', 'Expense entry successfully deleted.');
+            ->with('message', 'Expense entry successfully trashed.');
     }
 
     // miscellaneous

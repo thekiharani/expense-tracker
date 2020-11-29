@@ -25,7 +25,7 @@ class IncomeRequest extends FormRequest
     {
         return [
             'amount' => ['required', 'numeric'],
-            'source' => ['required'],
+            'source' => ['required', 'string'],
             'date_received' => ['required']
         ];
     }

@@ -24,7 +24,11 @@ class WishRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'cost_estimate' => ['required', 'numeric'],
+            'item' => ['required', 'string'],
+            'priority' => ['required', 'string'],
+            'image' => ['nullable'],
+            'pp_date' => ['nullable']
         ];
     }
 }

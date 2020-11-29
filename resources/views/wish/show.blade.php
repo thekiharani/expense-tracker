@@ -1,78 +1,49 @@
-@extends('layouts.master')
+<div class="modal-content">
 
-@section('title', __('Income Details'))
-
-@section('content')
-    <div class="card">
-        <p class="card-header h3 text-center">{{ __('Income Details') }}</p>
-        <div class="card-body">
-            <div class="text-right">
-                <a href="{{ route('income.create') }}" class="btn btn-primary btn-sm mb-2">
-                    <i class="fas fa-plus"></i>
-                    Add Income
-                </a>
-            </div>
-            <div class="table-responsive">
-                @include('layouts._messages')
-                <table class="table table-bordered table-sm" id="dt">
-                    <thead>
-                        <tr>
-                            <th>Amount</th>
-                            <th>Date Received</th>
-                            <th>Date Recorded</th>
-                            <th>Last Updated</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                </table>
-            </div>
-        </div>
+    <div class="modal-header">
+        <h5 class="modal-title" id="upsertModalLabel">{{ __('Wish Item Details') }}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
     </div>
 
-    @push('js')
-    <script>
-    $(function () {
-        loadData();
+    <div class="modal-body">
+        <table class="table table-bordered">
+            <tr>
+                <td>{{ __('Item') }}</td>
+                <th>{{ $wish->item }}</th>
+            </tr>
 
-        function loadData()
-        {
-            $('#dt').DataTable({
-                processing: true,
-                serverSide: true,
-                ajax: {
-                    url: '{{ route('income.index') }}'
-                },
-                columns: [
-                    {data: 'amount', name: 'amount'},
-                    {data: 'date_received', name: 'date_received'},
-                    {data: 'created_at', name: 'created_at'},
-                    {data: 'updated_at', name: 'updated_at'},
-                    {data: 'action', name: 'action'}
-                ],
-                "columnDefs": [
-                    {"targets": [3, 4], "searchable": false},
-                    {"targets": [4], "orderable": false}
-                ]
-            });
-        }
+            <tr>
+                <td>{{ __('Estimated Cost') }}</td>
+                <th>{{ auth()->user()->currency_code .' '. number_format($wish->cost_estimate, 2) }}</th>
+            </tr>
 
-        $(document).on('click', '.delete', function () {
-            const url = $(this).attr('data-link');
-            if (confirm('Are you sure you want to archive this income entry?')) {
-                $.ajax({
-                    url: url,
-                    method: 'DELETE',
-                    success: function (res) {
-                        $('#dt').DataTable().destroy();
-                        loadData();
-                    }
-                });
-            } else {
-                return false;
-            }
-        });
+            <tr>
+                <td>{{ __('Prospective Purchase Date') }}</td>
+                <th>{{ medium_date($wish->pp_date) }}</th>
+            </tr>
 
-    });
-    </script>
-    @endpush
-@endsection
+            <tr>
+                <td>{{ __('Priority') }}</td>
+                <th>@include('components.wish_dt._priority', ['wish' => $wish])</th>
+            </tr>
+
+            <tr>
+                <td>{{ __('Date Recorded') }}</td>
+                <th>{{ medium_date($wish->created_at) }}</th>
+            </tr>
+
+            <tr>
+                <td>{{ __('Last Updated') }}</td>
+                <th>{{ time_diff($wish->updated_at) }}</th>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+    </div>
+
+</div>

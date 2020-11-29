@@ -24,7 +24,10 @@ class ExpenseRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'cost' => ['required', 'numeric'],
+            'item' => ['required', 'string'],
+            'date_transacted' => ['required'],
+            'description' => ['nullable']
         ];
     }
 }

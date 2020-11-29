@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\WishRequest;
 use App\Models\Wish;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
@@ -27,7 +28,7 @@ class WishController extends Controller
                     return date_only($wish->pp_date);
                 })
                 ->editColumn('created_at', function ($wish) {
-                    return medium_date($wish->created_at);
+                    return date_only($wish->created_at);
                 })
                 ->editColumn('updated_at', function ($wish) {
                     return time_diff($wish->updated_at);
@@ -50,7 +51,9 @@ class WishController extends Controller
     // show
     public function show(Wish $wish)
     {
-        return $wish;
+        return view('wish.show', [
+            'wish' => $wish
+        ]);
     }
 
     // create
@@ -60,13 +63,23 @@ class WishController extends Controller
     }
 
     // store
-    public function store(Request $request)
+    public function store(WishRequest $request)
     {
-        Wish::create([
-            'cost_estimate' => $request->cost_estimate,
-            'item' => $request->item,
-            'pp_date' => $request->pp_date
+        $wish = Wish::create([
+            'cost_estimate' => $request->input('cost_estimate'),
+            'item' => $request->input('item'),
+            'pp_date' => date_picked($request->input('pp_date')),
+            'priority' => $request->input('priority')
         ]);
+        if ($request->hasFile('image')) {
+            // do the upload
+            $image = $request->file('image');
+            $wish->image = $image;
+            $wish->save();
+        }
+        if ($request->ajax()) {
+            return response()->json(['message' => 'Wishlist was successfully recorded.'], 200);
+        }
         return redirect()->route('wish_list.index')
             ->with('message', 'Wish entry successfully created.');
     }
@@ -79,23 +92,36 @@ class WishController extends Controller
     }
 
     // update
-    public function update(Request $request, Wish $wish)
+    public function update(WishRequest $request, Wish $wish)
     {
         $wish->update([
-            'cost_estimate' => $request->cost_estimate,
-            'item' => $request->item,
-            'pp_date' => $request->pp_date
+            'cost_estimate' => $request->input('cost_estimate'),
+            'item' => $request->input('item'),
+            'pp_date' => date_picked($request->input('pp_date')),
+            'priority' => $request->input('priority')
         ]);
+        if ($request->hasFile('image')) {
+            // do the cleaning and fresh upload
+            $image = $request->file('image');
+            $wish->image = $image;
+            $wish->save();
+        }
+        if ($request->ajax()) {
+            return response()->json(['message' => 'Wishlist was successfully updated.'], 200);
+        }
         return redirect()->route('wish_list.index')
             ->with('message', 'Wish entry successfully updated.');
     }
 
     // destroy
-    public function destroy(Wish $wish)
+    public function destroy(Request $request, Wish $wish)
     {
         $wish->delete();
+        if ($request->ajax()) {
+            return response()->json(['message' => 'Wishlist entry was successfully trashed.'], 200);
+        }
         return redirect()->route('wish_list.index')
-            ->with('message', 'Wish entry successfully deleted.');
+            ->with('message', 'Wishlist entry was successfully trashed.');
     }
 
     // miscellaneous

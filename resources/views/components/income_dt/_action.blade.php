@@ -6,7 +6,7 @@
     <i class='fas fa-edit'></i>
     Edit
 </button>
-<button type='button' data-link="{{ route('income.destroy', $income->id) }}" class="btn btn-danger btn-sm delete">
+<button data-link="{{ route('income.destroy', $income->id) }}" class="btn btn-danger btn-sm delete">
     <i class='fas fa-trash-alt'></i>
     Trash
 </button>

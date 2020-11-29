@@ -25,10 +25,10 @@ class IncomeController extends Controller
                     return auth()->user()->currency_code .' '. number_format($income->amount);
                 })
                 ->editColumn('date_received', function ($income) {
-                    return medium_date($income->date_received);
+                    return date_only($income->date_received);
                 })
                 ->editColumn('created_at', function ($income) {
-                    return medium_date($income->created_at);
+                    return date_only($income->created_at);
                 })
                 ->editColumn('updated_at', function ($income) {
                     return time_diff($income->updated_at);
@@ -98,10 +98,10 @@ class IncomeController extends Controller
     {
         $income->delete();
         if ($request->ajax()) {
-            return response()->json(['message' => 'Income was successfully created'], 200);
+            return response()->json(['message' => 'Income was successfully trashed.'], 200);
         }
         return redirect()->route('income.index')
-            ->with('message', 'Income entry successfully deleted.');
+            ->with('message', 'Income entry successfully trashed.');
     }
 
     // miscellaneous

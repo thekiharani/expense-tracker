@@ -14,7 +14,7 @@
             </div>
             <div class="table-responsive">
                 @include('layouts._messages')
-                <table class="table table-bordered table-sm" id="dt">
+                <table class="table table-bordered dt-responsive nowrap" id="dt">
                     <thead>
                         <tr>
                             <th>Amount</th>
@@ -43,7 +43,7 @@
     @push('js')
         <script src="{{ asset('js/datetimepicker.min.js') }}"></script>
         <script>
-            $(document).ready(function () {
+            $(function () {
                 loadData();
 
                 // datatables
@@ -119,16 +119,6 @@
                         }
                     });
                 });
-
-                // datepicker
-                /*$(document).on('focus',".dpck", function(){
-                    $(this).datetimepicker({
-                        format: 'd-m-Y H:i:s'
-                    });
-                });*/
-                /*$('.dpck').datetimepicker({
-                    format: 'd-m-Y H:i:s'
-                });*/
 
                 // delete
                 $(document).on('click', '.delete', function () {
