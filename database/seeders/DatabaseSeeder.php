@@ -19,10 +19,10 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
-        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+        /*DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         User::truncate();
         Admin::truncate();
-        Currency::truncate();
+        Currency::truncate();*/
         $user = User::create([
             'name' => 'Joe Gitonga',
             'email' => 'master@noriapos.dev',
@@ -42,6 +42,6 @@ class DatabaseSeeder extends Seeder
             ['code' => 'ER', 'name' => 'Euro', 'created_at' => now(), 'updated_at' => now()]
         ]);
 
-        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+        // DB::statement('SET FOREIGN_KEY_CHECKS=1;');
     }
 }
